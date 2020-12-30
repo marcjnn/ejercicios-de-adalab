@@ -2,9 +2,11 @@
   margin: 0px;
 }
 
-/* .wrapper {
-  width: 100vw;
-} */
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
 .header {
   background-color: coral;
