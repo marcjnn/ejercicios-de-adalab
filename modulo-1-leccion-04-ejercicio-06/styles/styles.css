@@ -1,0 +1,42 @@
+* {
+  margin: 0px;
+}
+
+/* .wrapper {
+  width: 100vw;
+} */
+
+.header {
+  background-color: coral;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  /* align-items: center; */
+}
+
+.article {
+  background-color: skyblue;
+  width: 50%;
+  padding: 12px 8px;
+}
+
+.aside {
+  width: 25%;
+  text-align: center;
+}
+
+.aside1 {
+  background-color: gold;
+}
+
+.aside2 {
+  background-color: pink;
+}
+
+.footer {
+  background-color: lightgreen;
+  height: 30px;
+  text-align: center;
+}
