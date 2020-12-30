@@ -1,0 +1,57 @@
+/* I can do it with calc() and variables but lets see if I can achive it with flexbox
+
+:root {
+  --headerHeight: 50px;
+  --footerHeight: 60px;
+}
+
+.header {
+  width: 100%;
+  height: var(--headerHeight);
+  background-color: lightseagreen;
+}
+
+.main {
+  width: 100%;
+  height: calc(100vh - (var(--headerHeight) + var(--footerHeight)));
+  background-color: pink;
+}
+
+.footer {
+  width: 100%;
+  background-color: dodgerblue;
+  height: var(--footerHeight);
+  flex-shrink: 1;
+}  */
+
+/* body reset */
+
+.reset {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: lightseagreen;
+}
+
+.main {
+  width: 100%;
+  /* height: 1300px; */
+  background-color: pink;
+  flex-grow: 1;
+}
+
+.footer {
+  width: 100%;
+  background-color: dodgerblue;
+  height: 60px;
+}
