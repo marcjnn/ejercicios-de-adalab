@@ -1,0 +1,14 @@
+@mixin flex($displayFlex, $flexDirection) {
+  display: $displayFlex;
+  flex-direction: $flexDirection;
+}
+
+@mixin color($color, $backgroundColor) {
+  color: $color;
+  background-color: $backgroundColor;
+}
+
+@mixin border($border, $borderRadius) {
+  border: $border;
+  border-radius: $borderRadius;
+}

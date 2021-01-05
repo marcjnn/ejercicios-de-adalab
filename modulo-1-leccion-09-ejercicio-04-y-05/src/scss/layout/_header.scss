@@ -1,0 +1,10 @@
+.header {
+  height: 75px;
+  background-color: coral;
+  @media screen and (min-width: 768px) {
+    height: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 110px;
+  }
+}
