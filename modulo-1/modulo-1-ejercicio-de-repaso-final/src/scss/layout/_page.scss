@@ -1,0 +1,32 @@
+.page__column {
+  margin: 0px 25px;
+}
+
+.page__grid {
+  @include tablet {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-template-areas: "side content";
+  }
+}
+
+.content__grid {
+  grid-area: content;
+  @include tablet {
+    // min-height: 100vh;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header about" "blog about" "footer footer";
+  }
+}
+
+.side {
+  display: none;
+  @include tablet {
+    display: block;
+    background-color: $color-side;
+    grid-area: side;
+  }
+}

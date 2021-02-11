@@ -1,0 +1,72 @@
+.about {
+  display: flex;
+  margin-bottom: 50px;
+  @include tablet {
+    grid-area: about;
+    flex-direction: column;
+    padding-top: 18px;
+    margin-left: 18px;
+    margin-bottom: 25px;
+  }
+  .author {
+    width: 60%;
+    @include tablet {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    &__image {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+      @include tablet {
+        margin-bottom: 25px;
+      }
+      &--img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    &__name {
+      font-size: 1rem;
+      color: $color-main;
+      padding: 4px 0px;
+      font-family: $font-secondary;
+    }
+  }
+  .menu {
+    padding-left: 15px;
+    width: 40%;
+    @include tablet {
+      width: 100%;
+      padding-left: 0px;
+    }
+    &__tags {
+      list-style-type: none;
+      display: inline-flex;
+      flex-wrap: wrap;
+      &--item {
+        padding: 2px;
+      }
+    }
+    &__categories {
+      color: $color-main;
+      list-style-type: circle;
+      list-style-position: inside;
+      line-height: 1.4;
+      .menu__link {
+        margin-left: -10px;
+      }
+    }
+    &__tags,
+    &__categories {
+      margin: 5px 0px;
+      padding: 6px;
+      // border: 1px solid $color-secondary;
+      border-radius: 5px;
+      box-shadow: 0px 0px 2px $color-secondary;
+      @include tablet {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

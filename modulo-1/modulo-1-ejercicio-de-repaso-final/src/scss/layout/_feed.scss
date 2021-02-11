@@ -1,0 +1,17 @@
+.feed {
+  @include tablet {
+    grid-area: blog;
+  }
+  .post {
+    padding: 12px 0px;
+    &__title {
+      color: $color-secondary;
+      font-size: 1.2rem;
+      font-family: $font-secondary;
+    }
+    &__text {
+      margin: 8px 0px;
+      font-weight: 300;
+    }
+  }
+}

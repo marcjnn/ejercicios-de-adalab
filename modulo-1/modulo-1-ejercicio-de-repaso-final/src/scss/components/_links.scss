@@ -1,0 +1,10 @@
+.menu__link {
+  font-weight: 300;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: $color-main;
+  padding: 2px;
+  &:hover {
+    color: #a2d31a;
+  }
+}
