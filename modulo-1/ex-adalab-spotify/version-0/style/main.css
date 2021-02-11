@@ -1,0 +1,334 @@
+:root {
+  /* font size in root */
+
+  --mainFont: "Montserrat", sans-serif;
+}
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.column {
+  margin: 0 10px;
+}
+
+/* HEADER */
+
+.header,
+.footer {
+  background-color: black;
+  width: 100%;
+  color: white;
+  font-family: var(--mainFont);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+}
+
+/* change name */
+.headingTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  height: 25px;
+  margin: 12px 0;
+}
+
+.logoContainer img {
+  height: 100%;
+}
+
+.navBarTop {
+  display: none;
+}
+
+/* small goes in footer, but declared here in order not to repeat the code */
+.menu,
+.small {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+/* added .header so the size doesn't apply to footer; is there a better way? */
+.header .menu > li {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 0px;
+}
+
+/* MAIN */
+
+.main {
+  font-family: var(--mainFont);
+}
+
+/* HERO */
+
+.hero {
+  background-color: rgb(86, 158, 239);
+  color: white;
+  font: var(--mainFont);
+}
+
+.pageTitle {
+  padding: 120px 0px 10px;
+  font-size: 28px;
+}
+
+.claim {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btnRates {
+  display: block;
+  width: 100%;
+  background-color: rgb(48, 183, 93);
+  border: none;
+  border-radius: 20px;
+  font-family: var(--mainFont);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  padding: 10px 0px;
+  margin: 15px 0;
+}
+
+.conditionsApply {
+  margin: 10px 0px 20px;
+  display: inline-block;
+  font-size: 8px;
+}
+
+/* BENEFITS */
+
+.whyPremium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whyPremium h2:first-child {
+  width: 100%;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+.whyPremium h3:first-child {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.whyPremium p:nth-child(2) {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
+/* .flexBenefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.singleBenefit {
+  width: 80%;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.containerImage {
+  width: 20%;
+  margin-right: 15px;
+}
+
+img.bnftImage {
+  width: 100%;
+}
+
+.premiumDescription {
+  width: 70%;
+}
+
+/* FOOTER */
+
+/* .footer partially declared above with .header */
+.footer {
+  font-size: 7px;
+}
+
+.footer .menu {
+  flex-wrap: wrap;
+}
+
+.footer .menu > li {
+  padding: 2px 5px 2px 0px;
+}
+
+/* in order not to have it centralized but following the design: on footer menu padding top = country padding bottom and vice-versa */
+
+.footerWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* padding: 15px 0px; */
+}
+
+.navBarFooter {
+  width: 40%;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.country {
+  width: 25%;
+  /* align-self: flex-start; */
+  justify-content: flex-end;
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+
+.country img {
+  width: 25px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+
+@media all and (min-width: 768px) {
+  .column {
+    margin: 0 20px;
+  }
+
+  /* HEADER TABLET */
+
+  .headingTop .logoContainer:nth-child(2) {
+    display: none;
+  }
+
+  .navBarTop {
+    display: block;
+  }
+
+  ul.menu li:nth-child(n + 1):nth-child(-n + 3) {
+    padding-right: 20px;
+  }
+
+  ul.menu li:nth-child(n + 4):nth-child(-n + 5) {
+    padding-left: 20px;
+  }
+
+  ul.menu li:nth-child(4) {
+    border-left: 2px solid white;
+  }
+
+  /* HERO TABLET */
+
+  .hero {
+    background-image: url(../images/premium_dancer.png);
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: bottom right;
+  }
+
+  .btnRates {
+    padding: 10px 30px;
+    width: auto;
+  }
+
+  .pageTitle {
+    padding: 120px 0px 20px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .claim {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .conditionsApply {
+    width: 70%;
+    font-size: 9px;
+  }
+
+  /* BENEFITS TABLET */
+
+  .whyPremium {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .singleBenefit {
+    width: 50%;
+  }
+
+  .whyPremium h2:first-child {
+    margin: 60px 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  /* FOOTER TABLET */
+
+  /* .footerWrap {
+  align-items: flex-end;
+} */
+
+  .footer {
+    font-size: 9px;
+  }
+  .navBarFooter {
+    padding-bottom: 25px;
+  }
+
+  .country {
+    width: 130px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .whyPremium {
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .whyPremium h2:first-child {
+    font-size: 34px;
+  }
+
+  .singleBenefit {
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerImage {
+    width: 40%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .premiumDescription {
+    text-align: center;
+  }
+}
